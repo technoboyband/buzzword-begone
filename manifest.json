@@ -1,0 +1,20 @@
+{
+    "manifest_version": 2,
+    "name": "Buzzword Begone",
+    "version": "1.0",
+  
+    "description": "Remove silly buzzwords and replace them with something better",
+  
+    "icons": {
+      "48": "icons/border-48.png"
+    },
+  
+    "content_scripts": [
+      {
+        "matches": ["*://*/*"],
+        "all_frames": true,
+        "js": ["buzzword-begone.js"],
+        "run_at": "document_end"
+      }
+    ]
+  }
